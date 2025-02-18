@@ -1,3 +1,11 @@
+<?php
+  // Definisikan variabel
+  $judul_section = "Temukan Gaya Unikmu!";
+  $paragraf_fashion = "Fashion bukan hanya pakaian, tetapi juga cara kita berbicara kepada dunia!";
+  $default_teks = "Halo Dunia";
+  $gambar_fashion = "https://plus.unsplash.com/premium_photo-1664202525979-80d1da46b34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym91dGlxdWV8ZW58MHx8MHx8fDA%3D&w=1000&q=80";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,24 +39,24 @@
         .img-custom {
             width: 50%;
             max-width: 200px;
-            height: auto;
+            height: 35cm;
             display: block;
-            margin: auto;
+            margin: 20cm;
         }
     </style>
 </head>
 <body>
     <div class="container text-center mt-5">
-        <h1 class="judul">Temukan Gaya Unikmu!</h1>
-        <p id="fashionText" class="mt-3">Halo Dunia</p>
+        <h1 class="judul"><?php echo $judul_section; ?></h1>
+        <p id="fashionText" class="mt-3"><?php echo $default_teks; ?></p>
         <button class="btn btn-custom" onclick="ubahTeks()">Ubah Teks</button>
         <div class="row mt-4">
             <div class="col-md-6">
-                <p>Fashion bukan hanya pakaian, tetapi juga cara kita berbicara kepada dunia!</p>
+                <p><?php echo $paragraf_fashion; ?></p>
                 <textarea class="form-control" placeholder="Tulis pendapatmu tentang fashion..."></textarea>
             </div>
             <div class="col-md-6">
-                <img src="https://plus.unsplash.com/premium_photo-1664202525979-80d1da46b34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym91dGlxdWV8ZW58MHx8MHx8fDA%3D&w=1000&q=80" class="img-fluid rounded" alt="Fashion Image">
+                <img src="<?php echo $gambar_fashion; ?>" class="img-fluid rounded" alt="Fashion Image">
             </div>
         </div>
     </div>
